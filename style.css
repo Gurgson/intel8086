@@ -1,0 +1,304 @@
+*{
+    margin:0;
+    padding: 0;
+    user-select: none;
+}
+html{
+    font-size: 62.5%;
+    color: #fff;
+    background: radial-gradient(circle, rgba(36,37,36,1) 43%, rgba(61,60,69,1) 89%);
+}
+main{
+    height: 85vh;
+    width: 90vw;
+    background-color: rgb;
+    margin: 5vh 5vw;
+    background: linear-gradient(48deg, rgba(6,42,42,1) 50%, rgba(33,41,38,1) 73%);
+    font-size: 1.6rem;
+    font-family: impact;
+    border: 2px solid white;
+    border-radius: 2.5%;
+}
+.container{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    
+}
+.left{
+    
+    width: 50%;
+    height: 100%;
+    position: relative;
+
+}
+.right{
+    
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.registers{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;   
+    width:100%; 
+    height: 60%;
+}
+.registers-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 35%;
+    width: 20%;
+}
+.registers-right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+}
+.stack{
+    position: absolute;
+    top:5%;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 40%;
+}
+input{
+    text-align: center;
+    height: 3vh;
+}
+.blue{
+    border: 1px solid blue;
+    margin-bottom: 1px;
+}
+.red{
+    border:  1px solid red;
+    margin-bottom: 1px;
+}
+.register{
+    padding:1vh 1vw;
+}
+button{
+    padding:0.3rem;
+    letter-spacing: 0.1rem;
+    width: 7.5vw;
+    margin: 5px;
+    background: turquoise;
+    border: 1px solid green;
+    border-radius: 6%;
+    font-weight: bold;
+}
+.edit{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(66, 66, 66, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.editField{
+    
+    width: 40%;
+    height: 50%;
+    padding:10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 15;
+    background-color: rgba(00, 00, 00, 0.8);
+    border: 2px solid white;
+    border-radius: 5%;
+}
+.editField>* {
+    margin:15px;
+}
+.editClose{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.editInfo{
+    margin: -10px;
+    margin-bottom: 15px;
+    font: 1.2rem italic;
+
+}
+.editTitle{
+    font-size: 2rem;
+}
+.editInput{
+    margin-bottom: 2rem;
+    border:2px solid white;
+}
+.rightOptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    position: absolute;
+}
+.adressRegisterChoose{
+    display: flex;
+    position: absolute;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    left: 5%;
+    bottom: 25%;
+    
+}
+.registerChosen{
+    position: absolute;
+    bottom: 30px;
+}
+
+
+.errorMassage{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+    display: flex;
+    font-size: 2rem;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 1%;
+    
+}
+.errorMassage > span{
+    margin: 5px;
+}
+.intel{
+    position: fixed;
+    font-size: 5rem;
+    top: 1vh;
+    left: 15%;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registerOutput{
+    margin: 0 10px
+}
+.big{
+    font-size: 2.1rem;
+}
+.left:before {
+    content:"";
+    position:absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 3px;
+    height: 85%;
+    background-color: #083433;
+   
+   }
+   .registers-right::after{
+       content: "Data registers operations";
+       position: absolute;
+       top:15%;
+   }
+   .registers-right > div{
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+       margin-top: 10%;
+   }
+   .registers-right > div::after{
+    content: "Stack operations";
+    position: absolute;
+    top:50%;
+   }
+   .registersRight{
+       position: absolute;
+       top:5%;
+       left: 5%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .registersRight::after{
+       content:"Adress registers";
+       position: absolute;
+       top: -10%;
+
+   }
+   .rightOptions{
+       position: absolute;
+       top:5%;
+       right:5%;
+       width:50%
+   }
+   .rightOptions::after{
+       content: "Choose flow data flow direction:";
+       position: absolute;
+       top: -35%
+   }
+   .whichRegister{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    font-size: 2rem;
+   }
+   .memory{
+    position: absolute;
+    top: 25%;
+    left: 55%;
+   }
+   .memoryButtons{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+       margin-top: 10%;
+   }
+   .adressRegisterChoose::after{
+       content: "Choose index:";
+        position: absolute;
+        top:-35%;
+
+   }
+   .stackDisplay{
+       margin-bottom: 5%;
+   }
+   .stackDisplay:before {
+    content:"";
+    position:absolute;
+    right: 7.5%;
+    top: 35%;
+    transform: translateY(-50%);
+    display: block;
+    width:  85%;
+    height: 3px;
+    background-color: #083433;
+   
+   }

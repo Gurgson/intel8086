@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rejestr intel 8086</title>
+    <script src="jq.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="left">
+                <div class="registers">
+                    <div class="registers-left">
+                        <span>Data registers</span>
+                        <div class="register ax">
+                            <span class="registerName">AX</span>
+                            <span class="registerOutput">x</span>
+                            <button>Edit</button>
+                        </div>
+                        <div class="register bx">
+                            <span class="registerName">BX</span>
+                            <span class="registerOutput">x</span>
+                            <button>Edit</button>
+                        </div>
+                        <div class="register cx">
+                            <span class="registerName">CX</span>
+                            <span class="registerOutput">x</span>
+                            <button>Edit</button>
+                        </div>
+                        <div class="register dx">
+                            <span class="registerName">DX</span>
+                            <span class="registerOutput">x</span>
+                            <button>Edit</button>
+                        </div>
+                    </div>
+                    <div class="registers-right">
+                        <button class="registerButton move">Move</button>
+                        <button class="registerButton exch">Exchange</button>
+                        <button class="registerButton clear">Clear</button>
+                        <button class="registerButton random">Random</button>
+                        <button class="registerButton unmark">Unmark</button>
+                        <div>
+                                <button class="registerButton push stackButton">Push to stack</button>
+                                <button class="registerButton pop stackButton">Pop from stack</button>
+                                <button class="registerButton clearStack stackButton">Clear stack </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack">
+                    <span>Stack top element:</span>
+                    <span class="stackDisplay"></span>
+                    <span>From (blue)</span>
+                    <span class="m1Display"></span>
+                    <span> To (red) </span>
+                    <span class="m2Display"></span>
+                </div>
+            </div>
+            <div class="right">
+                <div class="rightOptions">
+                    <span><input type="radio" value="1" class="rightOptionsInput" checked>Register > Memory</span>
+                    <span><input type="radio" value="2" class="rightOptionsInput">Memory > Register </span>
+                </div>
+                <div class="registersRight">
+                    <div class="register si">
+                        <span class="registerName">SI</span>
+                        <span class="registerOutput"></span>
+                        <button>edit</button>
+                    </div>
+                    <div class="register di">
+                        <span class="registerName">DI</span>
+                        <span class="registerOutput"></span>
+                        <button>edit</button>
+                    </div>
+                    <div class="register bp">
+                        <span class="registerName">BP</span>
+                        <span class="registerOutput"></span>
+                        <button>edit</button>
+                    </div>
+                    <div class="register sp">
+                        <span class="registerName">SP</span>
+                        <span class="registerOutput"></span>
+                    </div>
+                    <div class="register disp">
+                        <span class="registerName">DISP</span>
+                        <span class="registerOutput"></span>
+                        <button>edit</button>
+                    </div>
+                    <button class="adressClear">Clear</button>
+                    <button class="adressRandom">Random</button>
+                </div>
+                <div class="adressRegisterChoose">
+                    <button class="registerChoose si">SI</button>
+                    <button class="registerChoose di">DI</button>
+                    <button class="registerChoose bx">BX</button>
+                    <button class="registerChoose bp">BP</button>
+                    <button class="registerChoose dibx">DI+BX</button>
+                    <button class="registerChoose sibx">SI + BX</button>
+                    <button class="registerChoose sibp">SI + BP</button>
+                    <button class="registerChoose dibp">DI + BP</button>
+                </div>
+                <div class="memory">
+                    <span>Memory:</span>
+                    <div>
+                        <span>index:</span>
+                        <span class=memoryIndex></span>
+                    </div>
+                    <div><span>value:</span>
+                    <span class=memoryValue></span></div>
+                    <div class="memoryButtons">
+                        <button class="memoryMove">Move</button>
+                        <button class="memoryExch">EXCH</button>
+                        <button class="clearMemory">clear memory</button>
+                    </div>
+                </div>
+                <div class="whichRegister">
+                    <span class="whichRegister-1">register chosen: <span class="whichRegister-2"> </span></span>
+                </div>
+                <div class="intel">I N T E L 8 0 8 6</div>
+
+            </div>
+        </div>
+    </main>
+    <div class="edit">
+        <div class="editField">
+            <div class="editClose">X</div>
+            <div class="editTitle">Edit register: &nbsp <span> </span></div>
+            <input class="editInput" type="text" value="">
+            <span class="editInfo">max 4 heksadecimal numbers</span>
+            <button class="editButton" type="submit">Submit</button>
+
+        </div>
+    </div>
+    <div class="errorMassage">
+    </div>
+</body>
+</html>
