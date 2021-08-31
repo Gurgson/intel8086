@@ -259,7 +259,7 @@ button{
        width:50%
    }
    .rightOptions::after{
-       content: "Choose flow data flow direction:";
+       content: "Choose data flow direction:";
        position: absolute;
        top: -35%
    }
