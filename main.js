@@ -21,7 +21,7 @@ const stackLimitMessage = "You reached stack limit. You cannot push further";
 const stackEmptyMessage = "Stack is empty you cannot withdraw data";
 
 function registerCompleteMessage(which){
-    return "Register " + which + " has been edited";
+    return "Register " + which + " edited";
 }
 function registerErrorMessage(which){
     return "Register " + which + " was not edited. Please use maximum 4 heksadecimal numbers";
